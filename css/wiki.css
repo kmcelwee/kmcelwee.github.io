@@ -1,0 +1,72 @@
+#wiki_container {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
+	background: white;
+	border: 10px solid black;
+}
+
+#female {
+	/*visibility: hidden;*/
+	transform: scale(.5) rotateX(90deg); /**/
+	position: absolute;
+	right: 0px;
+}
+
+#male {
+	/*visibility: hidden;*/
+	transform: scale(.5) rotateX(90deg); /**/
+	position: absolute;
+	right: 0px;
+}
+
+#globe {
+	/*visibility: hidden;*/
+	position: absolute;
+    top: -130px;
+    left: -130px;
+	transform: scale(.25);
+	transition: transform .5s;
+}
+
+#wiki_container:hover #globe {
+	transform: scale(.25) rotateX(90deg);
+	animation: .5s spinin linear, 1s spin 1.5s linear, .5s spinout 3.5s, 1000s stop_spinning 4s;
+}
+
+#wiki_container:hover #male {
+	transform: scale(.25) rotateX(90deg);
+	animation: 1s spin linear .5s;
+}
+
+#wiki_container:hover #female {
+	transform: scale(.25) rotateX(90deg);
+	animation: 1s spin linear 2.5s;
+}
+
+@keyframes spinin {
+	0% {transform: scale(.25) rotateX(0deg);}
+	100% {transform: scale(.25) rotateX(90deg);}
+}
+
+@keyframes spin {
+	0% {transform: scale(.25) rotateX(90deg);}
+	20% {transform: scale(.25) rotateX(0deg);}
+	80% {transform: scale(.25) rotateX(0deg);}
+	100% {transform: scale(.25) rotateX(90deg);}
+}
+
+@keyframes spinout {
+	0% {transform: scale(.25) rotateX(90deg);}
+	100% {transform: scale(.25) rotateX(0deg);}
+}
+
+@keyframes stop_spinning {
+	0% {transform: scale(.25) rotateX(0deg);}
+	100% {transform: scale(.25) rotateX(0deg);}
+}
+
+#wiki_container:hover {
+	border-color: #aaa;
+}

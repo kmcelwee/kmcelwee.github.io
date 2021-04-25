@@ -1,0 +1,9 @@
+#stravinsky_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid orange;
+	align-content: center;
+}

@@ -1,0 +1,30 @@
+#weakest_link_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid #8A0A50;
+	align-content: center;
+}
+
+#weakest_link_container img {
+	position: absolute;
+}
+
+#link {
+	transform: scale(.8);
+	top: 0px;
+	left: 0px;
+}
+
+#broken_link {
+	transform: scale(.8);
+	top: -20px;
+	left: 0px;
+	opacity: 0;
+}
+
+#weakest_link_container:hover #broken_link {
+	opacity: 1;
+}

@@ -1,0 +1,147 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+	--bc: rgb(37,79,33);
+}
+
+a {
+	color: inherit;
+}
+
+.go_back_container {
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	color: white;
+	padding: 15px 30px;
+	position: absolute;
+	transition: 250ms;
+}
+
+.go_back a {
+	text-decoration: none;
+	font-family: 'Courier New', fixed;
+
+}
+
+.go_back_container:hover {
+	transform: scale(1.05);
+}
+
+header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 370px;
+	width: 100%;
+	background: var(--bc);
+	text-align: center;
+	color: white;
+}
+
+header h1 {
+	position: absolute;
+	bottom: 50%;
+	transform: translateY(-50%);
+}
+
+#subtitle {
+	font-family: 'Times New Roman';
+	font-size: 50px;
+	/*padding-left: 150px;*/
+	padding-top: 50px;
+}
+
+#explanation_container {
+	margin: 50px auto;
+	max-width: 500px;
+}
+
+#explanation {
+	display: block;
+	margin: 30px auto;
+	width: 550px;
+}
+
+footer {
+	background: var(--bc);
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	height: 70px;
+}
+
+#tool {
+	margin: 60px;
+	margin-top: 0px;
+}
+
+#tool td {
+	width: 150px;
+}
+
+h2 {
+	line-height: 2.5em;
+}
+
+#score_input table {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#bar {
+	width: 550px;
+	margin: 0 auto;
+	font-size: 0;
+	height: 0px;
+	opacity: 0;
+	transition: opacity 500ms, height 500ms;
+	visibility: hidden;
+}
+
+#bar_table {
+	width: 100%;
+}
+
+#bar_table td {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	transition: width 500ms;
+}
+
+#bar {
+	/*margin-top*/: 120px;
+	/*width: 100%;*/
+}
+
+#bar #q {
+	background: grey;
+	width: 100%;
+}
+#bar #p1 {
+	background: blue;
+	width: 0%;
+}
+
+#bar #p2 {
+	background: red;
+	width: 0%;
+}
+
+#breakdown_table {
+	width: 100%;
+	font-size: 16px;
+	margin-top: 15px;
+	text-align: center;
+}
+
+#table_title {
+	font-size: 15px;
+	text-align: center;
+	height: 15px;
+	margin-top: 50px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144525485-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144525485-1');
+  </script>
+  <title>Scrabble Luck Calculator</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="letters.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <!--  -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
+</head>
+<body>
+  <header>
+    <div class="go_back_container">
+      <div class="go_back">
+        <a href="../index.html">&#171; Discover similar projects</a>
+      </div>
+    </div>
+    <div id="title">
+      <div id="all_letters">
+        <span class="let_container"><span class="let" tile_value="1" id="l0">S</span></span>
+        <span class="let_container"><span class="let" tile_value="3" id="l1">C</span></span>
+        <span class="let_container"><span class="let" tile_value="1" id="l2">R</span></span>
+        <span class="let_container"><span class="let" tile_value="1" id="l3">A</span></span>
+        <span class="let_container"><span class="let" tile_value="3" id="l4">B</span></span>
+        <span class="let_container"><span class="let" tile_value="3" id="l5">B</span></span>
+        <span class="let_container"><span class="let" tile_value="1" id="l6">L</span></span>
+        <span class="let_container"><span class="let" tile_value="1" id="l7">E</span></span>
+      </div>
+        <div id="subtitle">
+          Luck Calculator
+        </div>
+      <!-- </h1> -->
+    </div>
+    <!-- <h1>Luck Calculator</h1> -->
+  </header>
+  <div id="explanation_container">
+      <h2>Did you really win or were you just lucky?</h2>
+      <p>By tracking how computers play Scrabble against each other, we can calculate how much luck inherently exists in the game. Drawing from thousands of Scrabble games played on the <a href="http://people.csail.mit.edu/jasonkb/quackle/" target="_blank">Quackle software</a>, the calculator below can approximate which player is better than the other. For details, read more in <a href="http://nautil.us/issue/73/play/presenting-the-scrabble-luck-calculator" target="_blank">Nautilus Magazine</a>.</p>
+ </div>
+ <div id="bar">
+  <table id="bar_table">
+    <tr>
+      <td id="p1"></td>
+      <td id="q"></td>
+      <td id="p2"></td>
+    </tr>
+  </table>
+
+  <h1 id="table_title">Confidence Breakdown</h1>
+  <table id="breakdown_table">
+    <tr>
+      <td style="border-bottom: 2px solid blue;">Player 1 is better</td>
+      <td style="border-bottom: 2px solid grey;">Uncertainty (50/50 toss up)</td>
+      <td style="border-bottom: 2px solid red;">Player 2 is better</td>
+    </tr>
+    <tr>
+      <td id="p1e"></td>
+      <td id="qe"></td>
+      <td id="p2e"></td>
+    </tr>
+  </table>
+</div>
+ 
+  <div id="tool">
+    <div id="score_input">
+      <table id="score_input_table">
+        <tr>
+          <td style="border-bottom: 2px solid blue;">PLAYER 1</td>
+          <td style="border-bottom: 2px solid red;">PLAYER 2</td>
+          <td style="border-bottom: 2px solid black;">Percent Difference</td>
+          <td style="border-bottom: 2px solid black;">Winner Confidence</td>
+        </tr>
+        <tr id="row_1">
+          <td><input type="number" id="player1_1" min="0" step="1" value="300" required></td>
+          <td><input type="number" id="player2_1" min="0" step="1" value="250" required></td>
+          <td id="percDiff_1"></td>
+          <td id="confidence_1"></td>
+        </tr>
+        <tr id="row_2">
+          <td><input type="number" id="player1_2" min="0" step="1" value="250" required></td>
+          <td><input type="number" id="player2_2" min="0" step="1" value="275" required></td>
+          <td id="percDiff_2"></td>
+          <td id="confidence_2"></td>
+        </tr>
+      </table>
+      
+      <table>
+        <tr>
+          <td style="padding-top: 30px; width: inherit;" colspan="2">
+            <button type="submit" onclick="runCalcs()">Submit</button>
+            <button type="submit" onclick="addGame()">Add Game</button>
+            <button type="submit" onclick="removeGame()">Remove Game</button>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  
+
+  <footer>
+
+  </footer>
+</body>
+</html>

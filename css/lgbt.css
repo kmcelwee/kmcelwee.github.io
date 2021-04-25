@@ -1,0 +1,81 @@
+#lgbt_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	/*background: white;*/
+	border: 10px solid black;
+}
+
+#lgbt_container img {
+	width: 100%;
+}
+
+#lgbt_container:hover img {
+	opacity: .7;
+}
+
+/*
+#lgbt_flag {
+	width: 100%;
+	height: 43px;
+	background: red;
+	box-shadow: 0px 41px orange,
+		0px 82px yellow,
+		0px 124px green,
+		0px 166px blue,
+		0px 209px purple;
+	z-index: -3;
+	opacity: .6;
+}
+
+#home {
+	position: absolute;
+    transform: scale(.8) translateY(-50%);
+    top: 50%;
+    left: 0;
+    z-index: 3;
+}
+*/
+/*#home:hover {
+	transform: scale(30);
+}
+*/
+/*#lgbt_container:hover {
+	transform: scale(30);
+	border-color: blue;
+}*/
+
+/*Hack. not sure why hover on lgbt_container isn't working*/
+/*#lgbt:hover #lgbt_container {
+	opacity: .7;
+}*/
+
+/*#home-mask {
+	position: absolute;
+    top: -205px;
+    left: -217px;
+	transform: scale(.7);
+	opacity: 0;
+	transition: opacity .5s;
+#lgbt_container:hover #home-mask {
+	opacity: 0;
+}*/
+
+/*#lgbt_container:hover #evicted {
+	opacity: 1;
+
+
+#evicted {
+	font-weight: bolder;
+	letter-spacing: 3px;
+	position: absolute;
+    top: 123px;
+    left: 70.6px;
+    border: 5px solid red;
+    border-radius: 2px;
+    padding: 3px 3px 3px 7px;
+    opacity: 0;
+    z-index: 3;
+}
+}*/

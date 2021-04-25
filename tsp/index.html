@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144525485-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-144525485-1');
+	</script>
+	<!-- social media preview -->
+	<meta property="og:title" content="A traveling salesperson heuristic in NlogN time"/>
+	<meta property="og:description" content="By repurposing a common machine learning algorithm, we can get a fast solution to a notoriously difficult problem."/> 
+	<meta property="og:image" content="http://www.brownanalytics.com/tsp/thumbnail.png" />
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<!-- Data Tables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+	<!--  -->
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans" rel="stylesheet">
+	<title>A traveling salesperson heuristic in NlogN time</title>
+</head>
+<body>
+	<header class="shadow">
+		<div class="go_home"><a href="http://brownanalytics.com" id="go_home_link">&#171; Discover similar projects</a></div>
+		<div>Brown Analytics, LLC</div>
+	</header>
+	<div id="below_header">
+		<div id="blog_header" class="shadow">
+			<img src="img/tsp.svg" alt="" id="header_image">
+			<div class="title_container" class="shadow">
+				<div class="blog_title">A traveling salesperson heuristic in NlogN time</div>
+				<div class="blog_subtitle">By repurposing a common machine learning algorithm, we can get a fast solution to a notoriously difficult problem.</div>
+				<div class="byline">By Kevin McElwee</div>
+			</div>
+		</div>
+	<div class="blog_container">
+		<h2>
+			What’s the algorithm?
+		</h2>
+		
+		<p>
+			We can use <a target="_blank" href="https://www.youtube.com/watch?v=hDmNF9JG3lo">KMeans clustering</a> to divide our points recursively. If K = 4, we start with a square that divides all points into four quadrants. Each vertex can then be divided into four clusters, and we find the shortest path that integrates those four clusters into the existing square. The process repeats until the clusters ultimately converge into the points themselves. The KMeans algorithm is O(N), and it’s repeated an average of log<sub>K</sub>(N) times.
+		</p>
+
+		<p class="center"><img src="img/tsp.gif" alt="" id="gif"></p>
+
+		<h2>
+			Is this heuristic worthwhile?
+		</h2>
+		
+		<p>
+			I ran a few tests on files from the University of Waterloo’s <a target="_blank" href="http://www.math.uwaterloo.ca/tsp/world/countries.html#CH">TSP database</a>, and this algorithm offered solutions which were often within 20 percent of the estimated lowest bound.
+		</p>
+		<p>
+			<div id="my_table_container">
+				<table id="my_table" class="cell-border compact stripe hover">
+					<thead>
+						<tr><th>Country</th><th>N</th><th>Lower Limit</th><th>RC Solution</th><th>% Inc</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>Argentina</td><td>6,723</td><td>837,377</td><td>997,901</td><td>19.2</td></tr>
+						<tr><td>Burma</td><td>33,708</td><td>959,011</td><td>1,132,858</td><td>18.1</td></tr>
+						<tr><td>Canada</td><td>4,663</td><td>1,290,319</td><td>1,546,099</td><td>19.8</td></tr>
+						<tr><td>China</td><td>71,009</td><td>4,565,452</td><td>5,365,123</td><td>17.5</td></tr>
+						<tr><td>Djibouti</td><td>38</td><td>6,656</td><td>7,148</td><td>7.4</td></tr>
+						<tr><td>Egypt</td><td>7,146</td><td>172,350</td><td>211,163</td><td>22.5</td></tr>
+						<tr><td>Ireland</td><td>8,246</td><td>206,171</td><td>241,133</td><td>17</td></tr>
+						<tr><td>Finland</td><td>10,639</td><td>520,527</td><td>610,253</td><td>17.2</td></tr>
+						<tr><td>Greece</td><td>9,882</td><td>300,899</td><td>351,438</td><td>16.8</td></tr>
+						<tr><td>Honduras</td><td>7,103</td><td>176,940</td><td>203,458</td><td>15</td></tr>
+						<tr><td>Italy</td><td>16,862</td><td>557,315</td><td>659,180</td><td>18.3</td></tr>
+						<tr><td>Japan</td><td>9,847</td><td>491,924</td><td>588,964</td><td>19.7</td></tr>
+						<tr><td>Kazakhstan</td><td>9,976</td><td>1,061,387</td><td>1,267,801</td><td>19.4</td></tr>
+						<tr><td>Luxembourg</td><td>634</td><td>11,340</td><td>12,969</td><td>14.4</td></tr>
+						<tr><td>Morocco</td><td>14,185</td><td>427,246</td><td>505,261</td><td>18.3</td></tr>
+						<tr><td>Oman</td><td>1,979</td><td>86,891</td><td>112,025</td><td>28.9</td></tr>
+						<tr><td>Nicaragua</td><td>2,373</td><td>96,132</td><td>111,163</td><td>15.6</td></tr>
+						<tr><td>Panama</td><td>4,951</td><td>114,831</td><td>135,980</td><td>18.4</td></tr>
+						<tr><td>Qatar</td><td>194</td><td>9,352</td><td>10,494</td><td>12.2</td></tr>
+						<tr><td>Rwanda</td><td>866</td><td>26,051</td><td>29,765</td><td>14.3</td></tr>
+						<tr><td>Sweden</td><td>24,978</td><td>855,597</td><td>1,009,072</td><td>17.9</td></tr>
+						<tr><td>Tanzania</td><td>6,117</td><td>394,609</td><td>464,427</td><td>17.7</td></tr>
+						<tr><td>Vietnam</td><td>22,775</td><td>569,288</td><td>669,286</td><td>17.6</td></tr>
+						<tr><td>Western Sahara</td><td>29</td><td>27,603</td><td>31,716</td><td>14.9</td></tr>
+						<tr><td>Yemen</td><td>7,663</td><td>238,314</td><td>286,335</td><td>20.2</td></tr>
+						<tr><td>Zimbabwe</td><td>929</td><td>95,345</td><td>110,531</td><td>15.9</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</p>
+		<p>
+			Though, instead of taking hours or days to complete, each were solved in less than 5 minutes. The time to complete each of these countries are plotted on the following chart:
+		</p>
+		
+		<p class="center"><img src="img/tsp2.png" alt="" width="80%"></p>
+
+		<p>
+			This algorithm has not been compared to other NlogN algorithms (suggestions welcome); however, it has been compared to the Smallest Insertion (SI) algorithm, which take N² time. Running 1000 tests on random nodes when N=100, recursive clustering is better than SI more than 59 percent of the time, despite SI taking considerably longer.
+		</p>
+
+		<p>
+			My testing can be found in <a target="_blank" href="https://github.com/kmcelwee/mediumBlog/blob/master/TSP/heuristic_performance.ipynb">this Jupyter notebook</a>.
+		</p>
+
+		<h2>Software Implementation</h2>
+		<p><a target="_blank" href="https://github.com/kmcelwee/mediumBlog/tree/master/TSP">Here is a link</a> to the code on GitHub, and here are three high-level functions the program offers:
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">recursive_clustering</span> <span style="color: #f92672">as</span> <span style="color: #f8f8f2">rc</span>
+<span style="color: #75715e"># Create 100 random points and draw solution with K = 4</span>
+<span style="color: #f8f8f2">rc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">solve_random(N</span><span style="color: #f92672">=</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">K</span><span style="color: #f92672">=</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e"># Given a numpy array, draw the solution</span>
+<span style="color: #f8f8f2">rc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">solve_array(all_nodes,</span> <span style="color: #f8f8f2">K</span><span style="color: #f92672">=</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e"># given a two-column CSV of X and Y, draw the solution</span>
+<span style="color: #f8f8f2">rc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">solve_file(</span><span style="color: #e6db74">&#39;testFiles/usa115475.csv&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">K</span><span style="color: #f92672">=</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">draw</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">False)</span>
+</pre></div>
+<!-- End hilite.me -->
+	</p>
+
+		<p>All these functions return a dictionary, the tour length, and the wait time. The dictionary has the following structure:
+<!-- HTML generated using hilite.me -->
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">path_d</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+	     <span style="color: #f8f8f2">ID0:</span> <span style="color: #f8f8f2">{</span>
+	          <span style="color: #e6db74">&#39;center&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[X,</span> <span style="color: #f8f8f2">Y],</span>
+	          <span style="color: #e6db74">&#39;connections&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[ID#, ID#],</span>
+	          <span style="color: #e6db74">&#39;subnodes&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[[x,</span> <span style="color: #f8f8f2">y]</span><span style="color: #f92672">....</span><span style="color: #f8f8f2">[x,</span> <span style="color: #f8f8f2">y]],</span>
+	          <span style="color: #e6db74">&#39;hasBeenSplit&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">True</span>
+	     <span style="color: #f8f8f2">},</span>
+	     <span style="color: #f8f8f2">ID1:</span> <span style="color: #f92672">...</span>
+	<span style="color: #f8f8f2">}</span>
+</pre></div>
+<!-- End hilite.me -->
+		</p>
+
+		<p>
+			This dictionary contains all clusters and their subnodes. If you wanted to access only the final nodes, you’d look only for keys whose subnodes list has a length one or haven’t been split. Or you can go to the last ID and follow the connections in a circle. Suggestions for better implementations are welcome.
+		</p>
+
+		<h2>What value of K should I use?</h2>
+		<p>
+			The algorithm considers all possible permutations of K when it integrates the new K clusters into the existing shape. With that in mind, a larger K can very quickly become slower than N². For points between 1,000 and 10,000, K = 5 seems to offer the shortest path. K = 5 is also consistently faster than all other K values, probably because it’s 120 permutations are outweighed by a faster convergence.
+		</p>
+
+		<h2>Can we make it better?</h2>
+		<p>
+			Developing some kind of statistical model to find the optimal value of K given the number of subnodes might be a straightforward, worthwhile area of research going forward. Currently K is static throughout the whole process; however, my intuition tells me that altering K as a function of its subnodes would decrease tour lengths and runtime.
+		</p>
+
+		<p>
+			Additionally, although I haven’t yet run any tests, this algorithm would theoretically run in NlogK(N) time on higher-dimensional TSP as well.
+		</p>
+		<br>
+		<p class="center">
+			<img src="../img/divider.svg" alt="" width="100px">
+		</p>
+		<br>
+		<em><p class="center">
+			Originally <a href="https://medium.com/@kevinrmcelwee/a-traveling-salesperson-heuristic-in-nlogn-time-5201bcd347e6" target="_blank">published on Medium</a> on March 9, 2019.
+		</p></em>
+		
+		<em><p class="center">Questions? Mistakes? Feel free to <a href="mailto:kevinrmcelwee@gmail.com">email me</a>. Check out my <a target="_blank" href="https://www.brownanalytics.com/">other projects</a>.</p></em>
+	</div>
+	</div>
+	<footer class="shadow">
+			<div id="contact_container">
+				<a target="_blank" href="https://github.com/kmcelwee"><img class="icon" src="../img/icons/github-brands.svg" width="30px" alt=""></a>
+				<a target="_blank" href="https://www.linkedin.com/in/kevin-mcelwee/"><img class="icon" src="../img/icons/linkedin-brands.svg" width="30px" alt=""></a>
+				<a target="_blank" href="https://medium.com/@kevinrmcelwee"><img class="icon" src="../img/icons/medium-brands.svg" width="30px" alt=""></a>
+				<div id="llc">Brown Analytics, LLC</div>
+			</div>
+	</footer>
+	<script>
+		$(document).ready( function () {
+			$('#my_table').DataTable({
+				"columns": [
+					null,
+					{ className: "format_numbers" },
+					{ className: "format_numbers" },
+					{ className: "format_numbers" },
+					{ className: "format_numbers" }
+				]
+			});
+		});
+	</script>
+</body>
+</html>

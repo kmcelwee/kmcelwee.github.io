@@ -1,0 +1,112 @@
+#tsp_container {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background: white;
+	border: 10px solid black;
+	height: inherit;
+	width: inherit;
+}
+
+#tsp_sign {
+	position: absolute;
+	font-size: 50px;
+	left: 50%;
+	top: 50%;
+	z-index: 3;
+	width: 100%;
+	background: white;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+#tsp_container img {
+    position: absolute;
+    transform: scale(.25);
+}
+
+#img1 {
+	left: -500px;
+    top: -10px;
+}
+
+#img2 {
+    left: -500px;
+    top: -180px;
+    /*transform: ;*/
+}
+
+#tsp_container:hover {
+	opacity: .6;
+}
+
+/*.line {
+	position: absolute;
+	height: 5px;
+	background: black;
+}
+
+#line1 {*/
+
+	/*transition: width 1s;
+	transform-origin: top left;}*/
+
+/*#line2 {
+	top: 50px;
+	left: 50px;
+	transform: rotate(50deg);
+	width: 50px;
+}
+
+#line3 {
+	
+}
+
+#line4 {
+	
+}
+
+#line5 {
+	
+}
+
+#line6 {
+	
+}
+
+#line7 {
+	
+}
+
+#points {
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 5px 10px 0px 5px black;
+}
+
+#points::after {
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	opacity: 1;
+	border-radius: 50%;
+	background-color: blue;
+	transition: all 3s;
+}
+
+#tsp_container:hover #points::after {
+	height: 100px;
+	width: 100px;
+	opacity: 0;
+
+}*/
+
+/*#tsp_container:hover #line1 {
+	width: ;
+}*/

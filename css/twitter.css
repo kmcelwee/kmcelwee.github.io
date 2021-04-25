@@ -1,0 +1,124 @@
+* {
+	--bird_scale: .6;
+	--twitter_color: #21ABE8;
+}
+
+#twitter_container {
+	overflow: hidden;
+	position: relative;
+	background: white;
+	border: 10px solid var(--twitter_color);
+	height: inherit;
+	width: inherit;
+}
+
+/*EVERYTHING BIRD*/
+
+#twitter_body {
+	position: absolute;
+	top: 25px;
+	left: 0px;
+}
+
+#twitter_wing_up {
+	position: absolute;
+	top: 25px;
+	left: 35px;
+	transition: opacity .2s;
+}
+
+#twitter-bird {
+	height: inherit;
+	width: inherit;
+	transform: scale(.5);
+}
+
+#twitter_wing_down {
+	position: absolute;
+	top: 105px;
+	left: 180px;
+	opacity: 0;
+}
+
+#twitter_container:hover {
+	border-color: #1777a2;
+}
+
+/*#E1E8ED*/
+
+#twitter_container:hover #twitter_wing_up {
+	animation: .15s wingup step-end infinite;
+}
+
+#twitter_container:hover #twitter_wing_down {
+	animation: .15s wingdown step-end infinite;
+}
+
+@keyframes wingup {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
+@keyframes wingdown {
+	0%  { opacity: 1;}
+	50% { opacity: 0; }
+}
+
+
+/*EVERYTHING CLOUDS*/
+
+.cloud {
+	transition: top 7s ease-in-out;
+	width: 350px; height: 120px;
+	background: var(--twitter_color);
+	border-radius: 100px;
+	position: absolute;
+	margin: 150px 50px;
+}
+.cloud::after, .cloud::before {
+	content: '';
+	position: absolute;
+	background: var(--twitter_color);
+}
+
+.cloud::after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+	border-radius: 100px;
+}
+.cloud::before  {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+}
+
+#cloud1 {
+	transform: scale(.35);
+	top: 0px;
+	right: 0px; 
+}
+
+#cloud2 {
+	transform: scale(.2);
+    top: -150px;
+    right: -220px;
+}
+
+#cloud3 {
+    transform: scale(.1);
+    top: -175px;
+    left: -150px;
+}
+
+#twitter_container:hover #cloud1 {
+	/*FROM -- top: 0px;*/
+    top: 750px;
+}
+#twitter_container:hover #cloud2 {
+	/*FROM -- top: -150px;*/
+	top: 370px;
+	}
+#twitter_container:hover #cloud3 {
+	/*FROM -- top: -175px;*/
+	top: 65px;
+}

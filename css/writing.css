@@ -1,0 +1,20 @@
+#writing_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid rgb(52, 181, 117);
+	align-content: center;
+}
+
+#writing_container img {
+	position: absolute;
+	top: -10px;
+	left: 0px;
+	transform: scale(.8);
+}
+
+#writing_container:hover {
+	opacity: .8;
+}

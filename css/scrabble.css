@@ -1,0 +1,37 @@
+#scrabble_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid rgb(215,189,131);
+	align-content: center;
+
+}
+
+#scrabble_container img {
+	position: absolute;
+	transform: scale(.5);
+}
+
+#tile {
+	top: -7px;
+	left: 0px;
+
+}
+
+#tile_q{
+	top: -7px;
+	left: 0px;
+	z-index: 1;
+	opacity: 0;
+}
+
+
+#scrabble_container:hover #tile_q {
+	opacity: 1;
+}
+
+#scrabble_container:hover {
+	border-color: rgba(215,189,131,.6);
+}

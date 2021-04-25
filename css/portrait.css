@@ -1,0 +1,52 @@
+
+#portrait_container {
+	top: 0px;
+}
+
+#portrait_container img {
+	position: absolute;
+	width: 195px;
+	top: 272px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+#circle {
+    height: 195px;
+    width: 195px;
+    background-color: rgb(68, 121, 75);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 272.5px;  
+    transform: translateX(-50%);
+    
+    z-index: 2;
+}
+
+#circle2 {
+    height: 215px;
+    width: 215px;
+    background-color: rgb(68, 121, 75);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 262.5px;
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: 0px 5px 5px #aaa;
+}
+
+#circle3 {
+      height: 215px;
+    width: 215px;
+    background-color: rgb(68, 121, 75);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 262.5px;
+    transform: translateX(-50%);
+/*    border-top-color: orange;*/
+    z-index: 1;
+}

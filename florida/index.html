@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144525485-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-144525485-1');
+	</script>
+	<!--  -->
+	<meta charset="UTF-8">
+	<title>Florida Headline Explorer</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<!--  -->
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤</text></svg>">
+	<!--  -->
+	<meta property="og:title" content="Florida Headline Explorer"/>
+	<meta property="og:description" content="View the most popular Florida Man & Woman headlines."/> 
+	<meta property="og:image" content="https://www.brownanalytics.com/florida/thumbnail.png" />
+</head>
+<body>
+	<div id="overlay">
+		<div id="overlay_content">
+			<p>Explore the most popular Florida Man/Woman headlines! URLs, dates, and ratings pulled from the FloridaMan subreddit as of February 2020. For more information and a more indepth data analysis, check out this <a href="https://medium.com/@kevinrmcelwee/explore-a-database-of-the-most-popular-florida-man-headlines-cec6f62c8360">blog post.</a></p>
+		
+			<p>Built by Kevin McElwee. View more projects at <a href="https://www.brownanalytics.com/">BrownAnalytics.com</a></p>
+		</div>
+	</div>
+	<div id="step1">
+		<div id="florida">FLORIDA</div>
+		<div id="choices">
+			<span id="man" class="button step1_button">MAN <span id="man_count" class="count"></span></span>
+			<span id="woman" class="button step1_button">WOMAN <span id="woman_count" class="count"></span></span>
+		</div>
+		<img src="img/about.svg" id="about" class="clickable" alt="">
+	</div>
+	<div id="tab">
+		<div class="col1">
+			<div id="step2" class="vert_column"></div>
+		</div>
+		<div class="col2">
+			<div id="step3" class="vert_column"></div>
+		</div>
+		<div class="col3"></div>
+	</div>
+</body>
+</html>

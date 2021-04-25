@@ -1,0 +1,20 @@
+#house_expenses_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid #05314A;
+	align-content: center;
+}
+
+#house_expenses_container img {
+    position: absolute;
+    top: -50%;
+    left: 0px;
+    transform: scale(.65) translateY(50%);
+}
+
+#house_expenses_container:hover {
+	opacity: .8;
+}

@@ -1,0 +1,49 @@
+.let {
+	position: relative;
+	display: inline-block;
+	width: 75px;
+	height: 85px;
+	background: rgb(215,189,131);
+	color: black;
+	border-radius: 5px;
+	line-height: 85px;
+	font-size: 50px;
+	transition: 250ms;
+
+}
+
+/*.let_co*/
+
+.let::after {
+	content: attr(tile_value);
+	position: absolute;
+	right: 5px;
+	font-size: 20px;
+	bottom: -30px;
+}
+
+#title {
+	position: relative;
+	padding-top: 50px;
+	min-width: 650px;
+}
+
+.let_container {
+	width: inherit;
+	height: inherit;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*.let_container:hover .let {
+	transform: rotate(-20deg) translateY(-50px);
+
+}*/
+/*
+.let:hover {
+	transform: rotate(-20deg) translateY(-50px);
+}*/
+
+@keyframes scrabble_fall {
+
+}

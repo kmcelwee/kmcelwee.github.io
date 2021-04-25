@@ -1,0 +1,18 @@
+#blm_container {
+    overflow: hidden;
+    position: relative;
+    height: inherit;
+    width: inherit;
+    background: #aaa;
+    border: 10px solid white;
+    align-content: center;
+    width: 250px;
+}
+
+#blm_background {
+    width: 100%;
+}
+
+#blm_container:hover {
+    opacity: .8;
+}

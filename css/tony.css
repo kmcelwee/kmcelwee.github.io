@@ -1,0 +1,64 @@
+#tony_container {
+	/*font-family: "Brush Script MT", cursive;*/
+	overflow: hidden;
+	position: relative;
+	border: 10px solid #FED128;
+	height: inherit;
+	width: inherit;
+	background: black;
+  text-align: center;
+}
+
+.tony_sign_subtitle {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    font-size: 15px;
+	color: #FED128;
+}
+
+#tony_sign {
+	margin-top: 10%;
+	height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+	position: absolute;
+	background: black;
+	color: #FB4264;
+	font-size: 60px;
+	line-height: 130px;
+	color: #FED128;
+}
+
+#tony_container:hover #tony_sign {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+#tony_container:hover {
+	border-color: #FA1C16;
+}
+
+@keyframes neon {
+	0%, 100% {
+    text-shadow: 0 0 10px #FA1C16, 
+    0 0 30px #FA1C16, 
+    0 0 100px #FA1C16, 
+    0 0 100px #FA1C16, 
+    0 0 .40px #FED128,
+    .50px .50px .10px #806914;
+    color: #FED128;
+	}
+  50% {
+    text-shadow: 0 0 .50px #800E0B,
+    	0 0 1.50px #800E0B, 
+    	0 0 50px #800E0B, 
+    	0 0 50px #800E0B, 
+    	0 0 .20px #800E0B, 
+    	.50px .50px .10px #40340A;
+    color: #806914;
+  }
+
+}

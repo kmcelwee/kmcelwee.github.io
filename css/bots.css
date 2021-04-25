@@ -1,0 +1,36 @@
+#bots_container {
+	overflow: hidden;
+	position: relative;
+	height: 250px;
+	width: 250px;
+	background: steelblue;
+	border: 10px solid steelblue;
+	align-content: center;
+}
+
+#blink {
+	position: absolute;
+	fill:#f7941d;
+	stroke: #f7941d;
+	stroke-width: 2px;
+	left: calc(50% - 13px);
+	top: calc(25% - 13px);
+}
+
+#head {
+	position: absolute;
+	width: 150px;
+	transform: translateY(-50%) translateX(50%);
+	top: 50%;
+	right: 50%;
+}
+
+#bots_container:hover #blink {
+	fill: black;
+	stroke: white;
+	stroke-width: 2px;
+}
+
+#bots_container:hover {
+	border: 10px solid black;
+}

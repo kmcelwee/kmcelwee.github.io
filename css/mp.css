@@ -1,0 +1,21 @@
+#mp_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	/*background: blue;*/
+	border: 10px solid black;
+	align-content: center;
+}
+
+#mp_image {
+	width: 250px;
+	/*display: block;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#mp_container:hover {
+	opacity: .6;
+}

@@ -1,0 +1,27 @@
+#moscow_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid black;
+	align-content: center;
+}
+
+#russian_flag {
+	width: 100%;
+	height: 33%;
+	background: white;
+	box-shadow: 0 84px blue, 0 167px red; 
+}
+
+#nesting_doll {
+	transform: scale(.5);
+	position: absolute;
+	top: -50px;;
+	left: 0px;
+}
+
+#moscow_container:hover {
+	opacity: .8;
+}

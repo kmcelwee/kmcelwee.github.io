@@ -1,0 +1,20 @@
+#wpw_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid purple;
+	align-content: center;
+	background: purple;
+}
+
+#wpw_container img {
+	position: absolute;
+    top: 11px;
+    left: 1px;
+}
+
+#wpw_container:hover {
+	opacity: .8;
+}

@@ -1,0 +1,54 @@
+#mueller_container {
+	overflow: hidden;
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: white;
+	border: 10px solid #FF4D00;
+	align-content: center;
+}
+
+#mueller_container img {
+	position: absolute;
+}
+
+#map {
+    top: -170px;
+    left: -181px;
+    transform: scale(.5);
+}
+
+#tooltip1 {
+	z-index: 1;
+	transform: scale(.5);
+	top: 0px;
+    left: 30px;
+    opacity: 0;
+}
+
+#tooltip2 {
+	z-index: 1;
+	transform: scale(.5);
+	top: -40px;
+    left: -86px;
+    opacity: 0;
+}
+
+#mueller_container:hover #tooltip1 {
+	animation: 2s fade;
+}
+
+#mueller_container:hover #tooltip2 {
+	animation: 2s fade 2s;
+}
+
+@keyframes fade {
+	0% {opacity: 0;}
+	20% {opacity: 1;}
+	80% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+#mueller_container:hover {
+	border-color: rgba(255, 77, 0, .8);
+}
