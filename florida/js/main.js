@@ -98,11 +98,11 @@ function activate_step3(e) {
 }
 
 $(document).ready(() => {
-	$.getJSON("https://kmcelwee.github.io/mediumBlog/florida/fm.json", function(data) {
+	$.getJSON("https://raw.githubusercontent.com/kmcelwee/mediumBlog/master/florida/fm.json", function(data) {
 		fm = data;
 		$('#man_count').text(`(${fm.count})`)
 	});
-	$.getJSON("https://kmcelwee.github.io/mediumBlog/florida/fw.json", function(data) {
+	$.getJSON("https://raw.githubusercontent.com/kmcelwee/mediumBlog/master/florida/fw.json", function(data) {
 		fw = data;
 		$('#woman_count').text(`(${fw.count})`)
 	});
