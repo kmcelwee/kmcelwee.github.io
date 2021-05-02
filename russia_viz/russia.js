@@ -209,7 +209,7 @@ function unhighlight_cat(cat) {
 
 window.onload = function() {
     var all_j;
-    $.getJSON("https://kmcelwee.github.io/russia_viz/data/clean.json", function(data) {
+    $.getJSON("https://raw.githubusercontent.com/kmcelwee/russia_viz/master/data/clean.json", function(data) {
         var all_j = data;
         years();
         all_items(all_j);
