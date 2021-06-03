@@ -32,7 +32,7 @@ $(document).ready(function() {
 	// colons ------------------------------------
 	var colon_titles;
 	var change_me = $('#updating_colon_title');
-	$.getJSON("https://raw.githubusercontent.com/kmcelwee/mediumBlog/master/some_colon_titles.json", function(data) {
+	$.getJSON("https://raw.githubusercontent.com/kmcelwee/kmcelwee.github.io/main/json/titles.json", function(data) {
 		colon_titles = data['t'];
 		change_me.text(colon_titles[parseInt(Math.random()*1000)])
 	});
