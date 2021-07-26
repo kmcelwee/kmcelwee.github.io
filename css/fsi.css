@@ -4,9 +4,38 @@
     height: inherit;
     width: inherit;
     background: white;
-    border: 10px solid rgb(102, 74, 228);
+    border: 10px solid #e2e9ee;
+    /* rgb(102, 74, 228) */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#fsi_container:hover #fsi_egg_top {
+    top: -70px;
+    /*transform:  rotate(35deg);*/
+    /*display: none;*/
+}
+#fsi_container:hover #fsi_hatched {
+    /*opacity:  1;*/
+    /*display: inline;*/
+}
+#fsi_hatched {
+    /*opacity:  0;*/
+    /*display: none;*/
+    /*position:  absolute;
+    top:  50%;
+    right:  50%;*/
+}
+
+#fsi_egg {
+    /*position:  absolute;
+    top:  50%;
+    right:  50%;*/
+}
+
+#fsi_egg_top {
+    position:  absolute;
+    top: 45px;
+    transition: 500ms top;
+}
