@@ -4,7 +4,9 @@
 	height: inherit;
 	width: inherit;
 	border: 10px solid #ddd;
-	align-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #img_fa:hover {
@@ -12,8 +14,9 @@
 }
 
 #florida_container img {
-	position: absolute;
-	top: 15px;
+	/*position: absolute;*/
+	/*top: 15px;*/
+	width:  80%;
 }
 
 #img_murica {
