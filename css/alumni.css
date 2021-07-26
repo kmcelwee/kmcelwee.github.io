@@ -3,16 +3,11 @@
 	position: relative;
 	height: inherit;
 	width: inherit;
-	background: #aaa;
-	border: 10px solid #ddd;
-	align-content: center;
-}
-
-#alumni_container img {
-	position: absolute;
-	transform: scale(.9) translateY(-50%);
-	top: 50%;
-	right: 0px;
+	background: black;
+	border: 10px solid #ff8f00;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #alumni_container:hover {
