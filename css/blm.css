@@ -3,14 +3,16 @@
     position: relative;
     height: inherit;
     width: inherit;
-    background: #aaa;
+    background: black;
     border: 10px solid black;
-    align-content: center;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
     width: 250px;
 }
 
-#blm_background {
-    width: 100%;
+#blm_icon {
+    width: 20%;
 }
 
 #blm_container:hover {
